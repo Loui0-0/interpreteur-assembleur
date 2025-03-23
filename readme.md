@@ -52,11 +52,6 @@ gcc -Wall -o simulateur -I include src/*.c
   - Décodage dynamique des instructions via une table de fonctions (add, sub, jmp, etc.).  
   - Mise à jour des registres, drapeaux et PC après chaque instruction.  
 
-### Défis Techniques  
-- **Gestion des Étiquettes** : Optimisation des recherches d'adresses avec des structures de données efficaces.  
-- **Extension de Signe** : Correction de l'extension des valeurs 8 bits pour les instructions `ldb`/`ldw`.  
-- **Synchronisation du PC** : Cohérence du compteur de programme lors des sauts et de l'exécution séquentielle.  
-
 ## Licence  
 Ce projet est distribué sous licence [MIT](https://fr.wikipedia.org/wiki/Licence_MIT).  
 
