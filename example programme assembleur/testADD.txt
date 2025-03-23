@@ -1,0 +1,6 @@
+	  add r1, r0, #10
+loop: sub r1, r1, #1
+	  out r1
+	  jzs fin
+	  jmp loop
+fin:  hlt

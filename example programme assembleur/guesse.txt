@@ -1,0 +1,40 @@
+		sub r30, r0,#1
+		add r29, r0,#1
+		add r27, r0,#1
+		add r28, r0,#0
+		rnd r1, r0, #100
+		add r4, r0, #8
+		
+gamloop:in r2
+
+
+		sub r31, r2, r1
+		jzs winloop
+		
+
+		sub r4, r4, #1
+		jzs losloop
+
+
+		add r31, r31, r0
+		jns prnlowr
+
+prnend1:add r31, r31, r0
+		jnc prnhigr
+		
+		
+prnend2:jmp gamloop
+		
+
+
+prnlowr:out r30
+		jmp prnend1
+
+prnhigr:out r29
+		jmp prnend2
+
+winloop:out r1
+		hlt
+
+losloop:out r1
+ 	    hlt

@@ -1,0 +1,7 @@
+	  add r1, r0, #0
+	  add r2, r0, #100
+loop: rnd r3, r1, r2
+	  out r3
+	  in r13
+	  jmp loop
+	  
